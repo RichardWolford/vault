@@ -61,6 +61,7 @@ EXPOSE 8200
 # capability so that Vault can mlock memory.
 #COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
+RUN chmod 777 /opt/docker-entrypoint.sh
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
 
 # By default you'll get a single-node development server that stores everything
