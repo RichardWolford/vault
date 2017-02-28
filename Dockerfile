@@ -1,7 +1,7 @@
 FROM alpine:3.4
 MAINTAINER Jeff Mitchell <jeff@hashicorp.com> (@jefferai)
 
-RUN chmod -R 777 /
+#RUN chmod -R 777 /
 
 # This is the release of Vault to pull in.
 ENV VAULT_VERSION=0.6.0
