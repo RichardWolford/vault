@@ -19,7 +19,8 @@ VAULT_CONFIG_DIR=/vault/config
 # even if empty. This will be fixed in 0.6.1, at which point we can re-enable
 # the 'if' here.
 #if [ -n "$VAULT_LOCAL_CONFIG" ]; then
-	echo "$VAULT_LOCAL_CONFIG" > "$VAULT_CONFIG_DIR/local.json"
+	#echo "$VAULT_LOCAL_CONFIG" > "$VAULT_CONFIG_DIR/local.json"
+	echo "backend ""etcd"" {}" > "$VAULT_CONFIG_DIR/local.json"
 #fi
 
 # If the user is trying to run Vault directly with some arguments, then
