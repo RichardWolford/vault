@@ -62,9 +62,10 @@ EXPOSE 8200
 #COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
 RUN chmod -R 777 /vault
+RUN chmod 777 /.vault-token
 RUN chmod 777 /opt/docker-entrypoint.sh
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
 
 # By default you'll get a single-node development server that stores everything
 # in RAM and bootstraps itself. Don't use this configuration for production.
-CMD ["server", "-dev"]
+CMD ["server"]
