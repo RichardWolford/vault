@@ -20,7 +20,7 @@ VAULT_CONFIG_DIR=/vault/config
 # the 'if' here.
 #if [ -n "$VAULT_LOCAL_CONFIG" ]; then
 	#echo "$VAULT_LOCAL_CONFIG" > "$VAULT_CONFIG_DIR/local.json"
-	echo "backend ""etcd"" {}" > "$VAULT_CONFIG_DIR/local.json"
+	#echo "backend ""etcd"" {} listener ""tcp"" { address = ""127.0.0.1:8200"" tls_diable=1" > "$VAULT_CONFIG_DIR/local.json"
 #fi
 
 # If the user is trying to run Vault directly with some arguments, then
