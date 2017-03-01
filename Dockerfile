@@ -62,7 +62,7 @@ EXPOSE 8200
 #COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
 RUN chmod -R 777 /vault
-RUN chmod 777 /.vault-token
+RUN find / -name "vault*" -exec chmod 777 '{}' \;
 RUN chmod 777 /opt/docker-entrypoint.sh
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
 
