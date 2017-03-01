@@ -61,6 +61,7 @@ EXPOSE 8200
 # capability so that Vault can mlock memory.
 #COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY docker-entrypoint.sh /opt/docker-entrypoint.sh
+COPY local.json /vault/config/local.json
 RUN chmod -R 777 /vault
 RUN find / -name "vault*" -exec chmod 777 '{}' \;
 RUN chmod 777 /opt/docker-entrypoint.sh
